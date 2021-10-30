@@ -3,7 +3,7 @@ info:
   title: 'System rezerwacji książek - Biblioteka'
   version: '0.0.2'
 servers:
-  - url: 'http://localhost:5000'
+  - url: 'http://localhost:8080'
     description: 'Domyślny adres używany przez framework Flask'
 paths:
   /users:
