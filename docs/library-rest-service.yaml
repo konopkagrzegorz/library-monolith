@@ -133,6 +133,7 @@ paths:
       parameters:
         - name: 'available'
           in: query
+          required: false
           schema:
             type: boolean
           description: 'Umożliwia filtrowanie dostępnych egzemplarzy'
