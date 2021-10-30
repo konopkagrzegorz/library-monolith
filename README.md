@@ -5,15 +5,22 @@ Materials for PK ZTP labs - Java - REST based monolith
 
 Przed zajęciami proszę o zapoznanie się z załączonymi materiałami oraz o zainstalowanie niezbędnego oprogramowania, które będzie wykorzystywane na tych i kolejnych zajęciach.
 
-### Proszę o zapoznanie się z następującymi materiałami
+### Proszę o zapoznanie się z następującymi materiałami:
 
-* [Oracle Trail -  The "Hello World!" Application](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/index.html)
-* [Oracle Trail - A Closer Look at the "Hello World" Application](https://docs.oracle.com/javase/tutorial/getStarted/application/index.html)
-* [Oracle Trail - What is a package](https://docs.oracle.com/javase/tutorial/java/concepts/package.html)
-* [Oracle Trail - Packages](https://docs.oracle.com/javase/tutorial/java/package/index.html)
-* [Ściągawka jak korzystać z Gita](https://training.github.com/downloads/pl/github-git-cheat-sheet)
+1. [API](https://pl.wikipedia.org/wiki/Interfejs_programowania_aplikacji)
+1. [REST](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
+1. [HTTP Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+1. [HTTP Response Status Codes](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status)
+1. [JSON](http://www.json.org/json-pl.html)
 
-###  Przed zajęciami proszę o zainstalowanie
+### Materiały, które mogą być pomocne podczas rozwiązywania zadania
+
+1. [REST API Tutorial](https://restfulapi.net/)
+1. [How to use Swagger UI](https://idratherbewriting.com/learnapidoc/pubapis_swagger.html)
+1. [Jackson vs Gson](https://www.baeldung.com/jackson-vs-gson)
+1. [The Repository Pattern Explained](https://blog.sapiensworks.com/post/2014/06/02/The-Repository-Pattern-For-Dummies.aspx)
+1. [Ściągawka jak korzystać z Gita](https://training.github.com/downloads/pl/github-git-cheat-sheet)
+###  Przed zajęciami proszę o zainstalowanie:
 
 * [Java Development Kit (JDK) w wersji 11, dystrybucja OpenJDK](https://openjdk.java.net/install/)
   * [Szczegłówa instrukcja instalacji OpenJDK na systemach MS Windows, na przykładzie OpenJDK 8](https://techoral.com/blog/java/openjdk-install-windows.html)
