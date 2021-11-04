@@ -67,7 +67,8 @@ Pobrany szablon projektu rozpakuj do katalogu głównego repozytorium tak, aby k
 ### Krok 4
 Zaktualizuj konfigurację projektu w IDE tak, aby był on rozpoznawany jako projekt Mavenowy, a następnie uruchom aplikację.
 ```diff
-! Wynik uruchomienia dołącz do sprawozdania wraz z komentarzem wyjaśniającym poszczególne etapy inicjalizacji aplikacji oraz źródło błędu.
+! Wynik uruchomienia dołącz do sprawozdania wraz z komentarzem wyjaśniającym 
+! poszczególne etapy inicjalizacji aplikacji oraz źródło błędu.
 ```
 ### Krok 5
 Zaktualizuj konfigurację połączenia do bazy danych H2. Zgodnie z wymaganiami poniżej:
@@ -85,7 +86,8 @@ Zaktualizuj konfigurację połączenia do bazy danych H2. Zgodnie z wymaganiami 
 ### Krok 6
 Przenieś plik odpowiedzialny za inicjalizację bazy danych `V1_0__create_librarydb_schema.sql` z katalogu [docs](docs/V1_0__create_librarydb_schema.sql) do `resources/db/migration` oraz uruchom aplikację ponownie.
 ```diff
-! Wynik uruchomienia dołącz do sprawozdania wraz z komentarzem wyjaśniającym poszczególne etapy inicjalizacji aplikacji.
+! Wynik uruchomienia dołącz do sprawozdania wraz z komentarzem 
+! wyjaśniającym poszczególne etapy inicjalizacji aplikacji.
 ```
 ### Krok 7
 Dodaj do aplikacji klasy odpowiedzialne za reprezentacje danych w formacie JSON zgodnie z dokumentacją zamieszczoną w [docs/library-rest-service.yaml](docs/library-rest-service.yaml).
@@ -93,7 +95,8 @@ Dodaj do aplikacji klasy odpowiedzialne za reprezentacje danych w formacie JSON 
 * `pl.edu.pk.ztp.librarymonolith.dto.BookDTO` reprezentacja modelu **Book**
 * `pl.edu.pk.ztp.librarymonolith.dto.BookRentalDTO` reprezentacja modelu **BookRental**
 ```diff
-! W ramach sprawozdania wyjaśnij kluczowe adnotacje wykorzystane do konfiguracji procesu serializacji do formatu JSON.
+! W ramach sprawozdania wyjaśnij kluczowe adnotacje wykorzystane 
+! do konfiguracji procesu serializacji do formatu JSON.
 ```
 ### Krok 8
 Dodaj do aplikacji klasę repozytorium odpowiedzialną za udostępnianie danych zapisanych w bazie danych w tabeli `tbl_users`. 
@@ -103,7 +106,8 @@ Klasa powinna posiadać następującą nazwę `pl.edu.pk.ztp.librarymonolith.rep
 * `boolean deleteUserById(final Integer userID)`
 * `UserDTO createUser(final UserDTO user)`
 ```diff
-! W ramach sprawozdania wyjaśnij cel oraz działanie zastosowanych w ramach tej klasy adnotacji @Repository oraz @Autowired
+! W ramach sprawozdania wyjaśnij cel oraz działanie zastosowanych 
+! w ramach tej klasy adnotacji @Repository oraz @Autowired
 ```
 ### Krok 9
 Dodaj do aplikacji klasę `pl.edu.pk.ztp.librarymonolith.rest.UsersController` odpowiedzialną za obsługę zasobu `/users` zgodnie z dokumentacją zamieszczoną w [docs/library-rest-service.yaml](docs/library-rest-service.yaml).
@@ -113,12 +117,14 @@ Klasa powinna udostępniać następujące metody publiczne:
 * `void deleteUser(final Integer userID)`
 * `UserDTO postUser(final UserDTO user)`
 ```diff
-! W ramach sprawozdania wyjaśnij kluczowe elementy wykorzystane do konfiguracji zasobu zgodnie z dokumentacją oraz sposób w jaki rozwiązana została obsługa błędów.
+! W ramach sprawozdania wyjaśnij kluczowe elementy wykorzystane do konfiguracji zasobu 
+! zgodnie z dokumentacją oraz sposób w jaki rozwiązana została obsługa błędów.
 ```
 ### Krok 10
 Dodaj do aplikacji klasę repozytorium odpowiedzialną za udostępnianie danych zapisanych w bazie danych w tabeli `tbl_books` oraz `tbl_rentals`. Klasa powinna posiadać następującą nazwę `pl.edu.pk.ztp.librarymonolith.repository.BookRepository`
 ```diff
-! W ramach sprawozdania udokumentuj publiczne metody zdefiniowane w ramach tej klasy. Opis powinien zawierać sygnaturę metody oraz krótki opis jej działania.
+! W ramach sprawozdania udokumentuj publiczne metody zdefiniowane w ramach tej klasy.
+! Opis powinien zawierać sygnaturę metody oraz krótki opis jej działania.
 ``` 
 ### Krok 11
 Dodaj do aplikacji klasę `pl.edu.pk.ztp.librarymonolith.rest.BooksController` odpowiedzialną za obsługę zasobu `/books` zgodnie z dokumentacją zamieszczoną w  [docs/library-rest-service.yaml](docs/library-rest-service.yaml).
@@ -128,7 +134,8 @@ Klasa powinna udostępniać następujące metody publiczne:
 * `BookDTO patchRentBook(final Integer bookID, final Integer userID)`
 * `BookDTO patchReturnBook(final Integer bookID, final Integer userID)`
 ```diff
-! W ramach sprawozdania wyjaśnij kluczowe elementy wykorzystane do konfiguracji zasobu zgodnie z dokumentacją oraz sposób w jaki rozwiązana została obsługa błędów.
+! W ramach sprawozdania wyjaśnij kluczowe elementy wykorzystane do konfiguracji zasobu 
+! zgodnie z dokumentacją oraz sposób w jaki rozwiązana została obsługa błędów.
 ```
 ### Krok 12
 Przetestuj poprawność działania aplikacji za pomocą narzędzia Postman lub dowolnego innego narzędzia.
