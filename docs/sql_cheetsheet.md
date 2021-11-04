@@ -1,4 +1,14 @@
 # Lista przydanych zapytań w języku SQL
+
+## Dostęp do konsoli bazy danych H2
+* [http://localhost:8080/h2-console](http://localhost:8080/h2-console)
+  
+![Schemat bazy danych](h2-console-login.png)
+
+## Schemat bazy danych
+
+![Schemat bazy danych](db_diagram.png)
+
 ## Operacje na tabeli użytkowników
 * Pobranie listy wszystkich użytkowników
 ```sql 
