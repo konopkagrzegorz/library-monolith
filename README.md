@@ -39,4 +39,24 @@ Za poprawne rozwiązania zadania można otrzymać 5 punktów.
 >
 > Ocena za zadania dostarczone po tym terminie będzie automatycznie obniżana o 1 punkt, natomiast zadania nadesłane po **21.11.2021 23:59** nie będą podlegały ocenie.
 
-## Zadania do wykonania w ramach laboratorium 
+## Zadania do wykonania w ramach laboratorium
+
+1. Wykonaj lokalną kopię prywatnego repozytorium z zadaniem dostępnego na platformie GitHub Classroom.
+2. Wygeneruj za pomocą [https://start.spring.io](https://start.spring.io) projekt startowy dla języka Java 11 oparty o narzędzie Maven. Wymagania do projektu:
+> * Metoda dystrybucji: **JAR**
+> * Dane projektu:
+>    * Grupa: **pl.edu.pk.ztp**
+>    * Artefakt i nazwa: **library-monolith**
+>    * Opis: **Aplikacja typu monolit do obsługi biblioteki**
+>    * Nazwka paczki: **pl.edu.pk.ztp.library-monolith**
+> * Wersja Spring Boot: **2.5.5**
+> * Wymagane zależności:
+>    * Spring Web
+>    * Baza danych H2
+>    * Moduł Flyway
+>    * JDBC API
+3. Pobrany szablon projektu rozpakuj do katalogu głównego repozytorium tak, aby katalog `src` z archiwum znajdował się w bezpośrednio w katalogu głównym repozytorium.
+```diff
+! Wykonaj zrzut ekranu struktury projektu po zaimportowaniu do IDE i dołącz do sprawozdania.
+```
+ 
