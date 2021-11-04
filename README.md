@@ -41,8 +41,11 @@ Za poprawne rozwiązania zadania można otrzymać 5 punktów.
 
 ## Zadania do wykonania w ramach laboratorium
 
-1. Wykonaj lokalną kopię prywatnego repozytorium z zadaniem dostępnego na platformie GitHub Classroom.
-2. Wygeneruj za pomocą [https://start.spring.io](https://start.spring.io) projekt startowy dla języka Java 11 oparty o narzędzie Maven. Wymagania do projektu:
+### Krok 1
+Wykonaj lokalną kopię prywatnego repozytorium z zadaniem dostępnego na platformie GitHub Classroom.
+
+### Krok 2
+Wygeneruj za pomocą [https://start.spring.io](https://start.spring.io) projekt startowy dla języka Java 11 oparty o narzędzie Maven. Wymagania do projektu:
 > * Metoda dystrybucji: **JAR**
 > * Dane projektu:
 >    * Grupa: **pl.edu.pk.ztp**
@@ -55,15 +58,19 @@ Za poprawne rozwiązania zadania można otrzymać 5 punktów.
 >    * Baza danych H2
 >    * Moduł Flyway
 >    * JDBC API
-3. Pobrany szablon projektu rozpakuj do katalogu głównego repozytorium tak, aby katalog `src` z archiwum znajdował się w bezpośrednio w katalogu głównym repozytorium.
+
+### Krok 3
+Pobrany szablon projektu rozpakuj do katalogu głównego repozytorium tak, aby katalog `src` z archiwum znajdował się w bezpośrednio w katalogu głównym repozytorium.
 ```diff
 ! Wykonaj zrzut ekranu struktury projektu po zaimportowaniu do IDE i dołącz do sprawozdania.
 ```
-4. Zaktualizuj konfigurację projektu w IDE tak, aby był on rozpoznawany jako projekt Mavenowy, a następnie uruchom aplikację.
+### Krok 4
+Zaktualizuj konfigurację projektu w IDE tak, aby był on rozpoznawany jako projekt Mavenowy, a następnie uruchom aplikację.
 ```diff
 ! Wynik uruchomienia dołącz do sprawozdania wraz z komentarzem wyjaśniającym poszczególne etapy inicjalizacji aplikacji oraz źródło błędu.
 ```
-5. Zaktualizuj konfigurację połączenia do bazy danych H2. Zgodnie z wymaganiami poniżej:
+### Krok 5
+Zaktualizuj konfigurację połączenia do bazy danych H2. Zgodnie z wymaganiami poniżej:
 ```ini
    spring.datasource.url=jdbc:h2:mem:librarydb
    spring.datasource.driverClassName=org.h2.Driver
@@ -75,3 +82,67 @@ Za poprawne rozwiązania zadania można otrzymać 5 punktów.
 ```diff
 ! W ramach sprawozdania wyjaśnij znaczenie poszczególnych opcji konfiguracyjnych.
 ```
+### Krok 6
+Przenieś plik odpowiedzialny za inicjalizację bazy danych `V1_0__create_librarydb_schema.sql` z katalogu [docs](docs/V1_0__create_librarydb_schema.sql) do `resources/db/migration` oraz uruchom aplikację ponownie.
+```diff
+! Wynik uruchomienia dołącz do sprawozdania wraz z komentarzem wyjaśniającym poszczególne etapy inicjalizacji aplikacji.
+```
+### Krok 7
+Dodaj do aplikacji klasy odpowiedzialne za reprezentacje danych w formacie JSON zgodnie z dokumentacją zamieszczoną w [docs/library-rest-service.yaml](docs/library-rest-service.yaml).
+* `pl.edu.pk.ztp.librarymonolith.dto.UserDTO` reprezentacja modelu **User**
+* `pl.edu.pk.ztp.librarymonolith.dto.BookDTO` reprezentacja modelu **Book**
+* `pl.edu.pk.ztp.librarymonolith.dto.BookRentalDTO` reprezentacja modelu **BookRental**
+```diff
+! W ramach sprawozdania wyjaśnij kluczowe adnotacje wykorzystane do konfiguracji procesu serializacji do formatu JSON.
+```
+### Krok 8
+Dodaj do aplikacji klasę repozytorium odpowiedzialną za udostępnianie danych zapisanych w bazie danych w tabeli `tbl_users`. 
+Klasa powinna posiadać następującą nazwę `pl.edu.pk.ztp.librarymonolith.repository.UserRepository` oraz udostępniać następujące metody publiczne:
+* `List<UserDTO> findAll()`
+* `UserDTO findByUserId(final Integer userID)`
+* `boolean deleteUserById(final Integer userID)`
+* `UserDTO createUser(final UserDTO user)`
+```diff
+! W ramach sprawozdania wyjaśnij cel oraz działanie zastosowanych w ramach tej klasy adnotacji @Repository oraz @Autowired
+```
+### Krok 9
+Dodaj do aplikacji klasę `pl.edu.pk.ztp.librarymonolith.rest.UsersController` odpowiedzialną za obsługę zasobu `/users` zgodnie z dokumentacją zamieszczoną w [docs/library-rest-service.yaml](docs/library-rest-service.yaml).
+Klasa powinna udostępniać następujące metody publiczne:
+* `List<UserDTO> getAllUsers()`
+* `UserDTO getUserById(final Integer userID)`
+* `void deleteUser(final Integer userID)`
+* `UserDTO postUser(final UserDTO user)`
+```diff
+! W ramach sprawozdania wyjaśnij kluczowe elementy wykorzystane do konfiguracji zasobu zgodnie z dokumentacją oraz sposób w jaki rozwiązana została obsługa błędów.
+```
+### Krok 10
+Dodaj do aplikacji klasę repozytorium odpowiedzialną za udostępnianie danych zapisanych w bazie danych w tabeli `tbl_books` oraz `tbl_rentals`. Klasa powinna posiadać następującą nazwę `pl.edu.pk.ztp.librarymonolith.repository.BookRepository`
+```diff
+! W ramach sprawozdania udokumentuj publiczne metody zdefiniowane w ramach tej klasy. Opis powinien zawierać sygnaturę metody oraz krótki opis jej działania.
+``` 
+### Krok 11
+Dodaj do aplikacji klasę `pl.edu.pk.ztp.librarymonolith.rest.BooksController` odpowiedzialną za obsługę zasobu `/books` zgodnie z dokumentacją zamieszczoną w  [docs/library-rest-service.yaml](docs/library-rest-service.yaml).
+Klasa powinna udostępniać następujące metody publiczne:
+* `List<BookDTO> getAllBooks(final boolean showOnlyAvailable)`
+* `BookDTO getBookRentals(final Integer bookID)`
+* `BookDTO patchRentBook(final Integer bookID, final Integer userID)`
+* `BookDTO patchReturnBook(final Integer bookID, final Integer userID)`
+```diff
+! W ramach sprawozdania wyjaśnij kluczowe elementy wykorzystane do konfiguracji zasobu zgodnie z dokumentacją oraz sposób w jaki rozwiązana została obsługa błędów.
+```
+### Krok 12
+Przetestuj poprawność działania aplikacji za pomocą narzędzia Postman lub dowolnego innego narzędzia.
+* Przykładowe pliki testów dla zasobu `/users` znajdują się w pliku [docs/postman_test_users.json](docs/postman_test_users.json)
+* Przykładowe pliki testów dla zasobu `/books` znajdują się w pliku [docs/postman_test_books.json](docs/postman_test_books.json)
+```diff
+! Wyniki testów dla następujących metod wraz z omówieniem dołącz do sprawozdania.
+! -- GET /users (uwzględniając obsługę błędów)
+! -- DELETE /users (uwzględniając obsługę błędów)
+! -- POST /users
+! -- GET /books (uwzględniając filtrowanie)
+! -- PATCH /books/return lub PATCH /books/rent (uwzględniając obsługę błędów)
+```
+
+
+
+
