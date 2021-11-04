@@ -48,7 +48,7 @@ Za poprawne rozwiązania zadania można otrzymać 5 punktów.
 >    * Grupa: **pl.edu.pk.ztp**
 >    * Artefakt i nazwa: **library-monolith**
 >    * Opis: **Aplikacja typu monolit do obsługi biblioteki**
->    * Nazwka paczki: **pl.edu.pk.ztp.library-monolith**
+>    * Nazwa paczki: **pl.edu.pk.ztp.library-monolith**
 > * Wersja Spring Boot: **2.5.5**
 > * Wymagane zależności:
 >    * Spring Web
@@ -59,4 +59,19 @@ Za poprawne rozwiązania zadania można otrzymać 5 punktów.
 ```diff
 ! Wykonaj zrzut ekranu struktury projektu po zaimportowaniu do IDE i dołącz do sprawozdania.
 ```
- 
+4. Zaktualizuj konfigurację projektu w IDE tak, aby był on rozpoznawany jako projekt Mavenowy, a następnie uruchom aplikację.
+```diff
+! Wynik uruchomienia dołącz do sprawozdania wraz z komentarzem wyjaśniającym poszczególne etapy inicjalizacji aplikacji oraz źródło błędu.
+```
+5. Zaktualizuj konfigurację połączenia do bazy danych H2. Zgodnie z wymaganiami poniżej:
+```ini
+   spring.datasource.url=jdbc:h2:mem:librarydb
+   spring.datasource.driverClassName=org.h2.Driver
+   spring.datasource.username=admin
+   spring.datasource.password=password
+   spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+   spring.h2.console.enabled=true
+```
+```diff
+! W ramach sprawozdania wyjaśnij znaczenie poszczególnych opcji konfiguracyjnych.
+```
