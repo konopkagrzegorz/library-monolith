@@ -9,15 +9,15 @@ W przypadku braku znajomości języka SQL polecam zapoznanie się z [dodatkowymi
 
 ## Wymagania dotyczące aplikacji
 
-1. Dostęp do aplikacji nie powinien wymagać autoryzacji, a po uruchomieniu aplikacji wszystkie zasoby powinny być dostępne pod adresem [http://localhost:8080](http://localhost:8080)
-1. Zasoby i funkcjonalność powinny być udostępniane przez REST API zgodne z dokumentacją zawartą w [docs/library-rest-service.yaml](https://epam-online-courses.github.io/ZTP-Java-REST-Monolith/)
-1. Aplikacja powinna wykorzystywać wbudowaną w aplikację bazę danych H2 do przechowywania stanu systemu
+1. Dostęp do aplikacji nie powinien wymagać autoryzacji, a po uruchomieniu aplikacji wszystkie zasoby powinny być dostępne pod adresem [http://localhost:8080](http://localhost:8080).
+1. Zasoby i funkcjonalność powinny być udostępniane przez REST API zgodne z dokumentacją zawartą w [docs/library-rest-service.yaml](https://epam-online-courses.github.io/ZTP-Java-REST-Monolith/).
+1. Aplikacja powinna wykorzystywać wbudowaną bazę danych H2 do przechowywania stanu systemu.
 
 ## Kryterium oceny rozwiązania
-
-Za poprawne rozwiązania zadania można otrzymać 5 punktów.
-
-1. Zgodność oraz poprawność implementacji funkcjonalności opisanej w ramach REST API
+```diff
+! Za poprawne rozwiązania zadania można otrzymać 5 punktów.
+```
+**1. Zgodność oraz poprawność implementacji funkcjonalności opisanej w ramach REST API**
 > Aplikacja powinna umożliwiać:
 > * pobranie listy użytkowników, usuwanie oraz dodawanie nowych użytkowników,
 > * pobranie listy dostępnych książek,
@@ -27,12 +27,12 @@ Za poprawne rozwiązania zadania można otrzymać 5 punktów.
 > Proszę zwrócić szczególną uwagę na trzymanie się formatu danych (JSON) oraz obsługi błędów zdefiniowanych w ramach dokumentacji REST API.
 > Dodatkowa funkcjonalność nie wymagana w ramach zadania nie będzie wypływała na ocenę końca przyznaną za zadanie.
 
-2. Sprawozdanie z laboratorium
+**2. Sprawozdanie z laboratorium**
 > Dołączenie sprawozdania do zrealizowanego zdania jest warunkiem koniecznym do uzyskania pozytywnej oceny z laboratorium. Zadania bez sprawozdania lub ze sprawozdaniem zawierającym znaczące braki merytoryczne nie będą podlegały ocenie.
 >
 > Sprawozdanie powinno zostać zamieszczone w katalogu [docs](docs) i dodane do repozytorium w oddzielnym commicie pod tytułem "Sprawozdanie".
 
-3. Termin dostarczenia rozwiązania
+**3. Termin dostarczenia rozwiązania**
 > Bezpośrednio po zajęciach w repozytorium powinny znaleźć się wynik prac zakończonych w trakcie laboratorium.
 >
 > Ostatecznym terminem na wysłanie rozwiązania zadania wraz ze sprawozdaniem jest **14.11.2021 23:59** (decyduje data ostatniego commitu).
@@ -71,13 +71,12 @@ Zaktualizuj konfigurację projektu w IDE tak, aby był on rozpoznawany jako proj
 ! poszczególne etapy inicjalizacji aplikacji oraz źródło błędu.
 ```
 ### Krok 5
-Zaktualizuj konfigurację połączenia do bazy danych H2. Zgodnie z wymaganiami poniżej:
+Zaktualizuj konfigurację połączenia do bazy danych H2 zapisaną w pliku `application.properties` zgodnie z wymaganiami poniżej:
 ```ini
    spring.datasource.url=jdbc:h2:mem:librarydb
    spring.datasource.driverClassName=org.h2.Driver
    spring.datasource.username=admin
    spring.datasource.password=password
-   spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
    spring.h2.console.enabled=true
 ```
 ```diff
