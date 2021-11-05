@@ -10,7 +10,7 @@ W przypadku braku znajomości języka SQL polecam zapoznanie się z [dodatkowymi
 ## Wymagania dotyczące aplikacji
 
 1. Dostęp do aplikacji nie powinien wymagać autoryzacji, a po uruchomieniu aplikacji wszystkie zasoby powinny być dostępne pod adresem [http://localhost:8080](http://localhost:8080)
-1. Zasoby i funkcjonalność powinny być udostępniane przez REST API zgodne z dokumentacją zawartą w [docs/library-rest-service.yaml](docs/library-rest-service.yaml)
+1. Zasoby i funkcjonalność powinny być udostępniane przez REST API zgodne z dokumentacją zawartą w [docs/library-rest-service.yaml](https://epam-online-courses.github.io/ZTP-Java-REST-Monolith/)
 1. Aplikacja powinna wykorzystywać wbudowaną w aplikację bazę danych H2 do przechowywania stanu systemu
 
 ## Kryterium oceny rozwiązania
@@ -90,7 +90,7 @@ Przenieś plik odpowiedzialny za inicjalizację bazy danych `V1_0__create_librar
 ! wyjaśniającym poszczególne etapy inicjalizacji aplikacji.
 ```
 ### Krok 7
-Dodaj do aplikacji klasy odpowiedzialne za reprezentacje danych w formacie JSON zgodnie z dokumentacją zamieszczoną w [docs/library-rest-service.yaml](docs/library-rest-service.yaml).
+Dodaj do aplikacji klasy odpowiedzialne za reprezentacje danych w formacie JSON zgodnie z dokumentacją zamieszczoną w [docs/library-rest-service.yaml](https://epam-online-courses.github.io/ZTP-Java-REST-Monolith/).
 * `pl.edu.pk.ztp.librarymonolith.dto.UserDTO` reprezentacja modelu **User**
 * `pl.edu.pk.ztp.librarymonolith.dto.BookDTO` reprezentacja modelu **Book**
 * `pl.edu.pk.ztp.librarymonolith.dto.BookRentalDTO` reprezentacja modelu **BookRental**
@@ -110,7 +110,7 @@ Klasa powinna posiadać następującą nazwę `pl.edu.pk.ztp.librarymonolith.rep
 ! w ramach tej klasy adnotacji @Repository oraz @Autowired
 ```
 ### Krok 9
-Dodaj do aplikacji klasę `pl.edu.pk.ztp.librarymonolith.rest.UsersController` odpowiedzialną za obsługę zasobu `/users` zgodnie z dokumentacją zamieszczoną w [docs/library-rest-service.yaml](docs/library-rest-service.yaml).
+Dodaj do aplikacji klasę `pl.edu.pk.ztp.librarymonolith.rest.UsersController` odpowiedzialną za obsługę zasobu `/users` zgodnie z dokumentacją zamieszczoną w [docs/library-rest-service.yaml](https://epam-online-courses.github.io/ZTP-Java-REST-Monolith/).
 Klasa powinna udostępniać następujące metody publiczne:
 * `List<UserDTO> getAllUsers()`
 * `UserDTO getUserById(final Integer userID)`
@@ -127,7 +127,7 @@ Dodaj do aplikacji klasę repozytorium odpowiedzialną za udostępnianie danych 
 ! Opis powinien zawierać sygnaturę metody oraz krótki opis jej działania.
 ``` 
 ### Krok 11
-Dodaj do aplikacji klasę `pl.edu.pk.ztp.librarymonolith.rest.BooksController` odpowiedzialną za obsługę zasobu `/books` zgodnie z dokumentacją zamieszczoną w  [docs/library-rest-service.yaml](docs/library-rest-service.yaml).
+Dodaj do aplikacji klasę `pl.edu.pk.ztp.librarymonolith.rest.BooksController` odpowiedzialną za obsługę zasobu `/books` zgodnie z dokumentacją zamieszczoną w  [docs/library-rest-service.yaml](https://epam-online-courses.github.io/ZTP-Java-REST-Monolith/).
 Klasa powinna udostępniać następujące metody publiczne:
 * `List<BookDTO> getAllBooks(final boolean showOnlyAvailable)`
 * `BookDTO getBookRentals(final Integer bookID)`

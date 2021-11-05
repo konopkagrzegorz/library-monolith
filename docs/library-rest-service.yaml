@@ -4,7 +4,7 @@ info:
   version: '0.0.2'
 servers:
   - url: 'http://localhost:8080'
-    description: 'Domyślny adres używany przez framework Flask'
+    description: 'Domyślny adres używany przez framework Spring Boot'
 paths:
   /users:
     get:
@@ -232,7 +232,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Book'
               example:
-                - id: 3
+                  id: 3
                   title: 'Python. Wprowadzenie, wydanie V'
                   author: 'Mark Lutz'
                   quantity: 4
@@ -277,7 +277,7 @@ paths:
               schema:
                 $ref: '#/components/schemas/Book'
               example:
-                - id: 3
+                  id: 3
                   title: 'Python. Wprowadzenie, wydanie V'
                   author: 'Mark Lutz'
                   quantity: 4
