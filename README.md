@@ -52,7 +52,7 @@ Wygeneruj za pomocą [https://start.spring.io](https://start.spring.io) projekt 
 >    * Artefakt i nazwa: **library-monolith**
 >    * Opis: **Aplikacja typu monolit do obsługi biblioteki**
 >    * Nazwa paczki: **pl.edu.pk.ztp.library-monolith**
-> * Wersja Spring Boot: **2.5.5**
+> * Wersja Spring Boot: **2.5.6**
 > * Wymagane zależności:
 >    * Spring Web
 >    * Baza danych H2
