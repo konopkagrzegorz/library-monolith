@@ -1,11 +1,8 @@
 # Literatura i materiały pomocnicze
 
-## Wstęp
-
 Przed zajęciami proszę o zapoznanie się z załączonymi materiałami oraz o zainstalowanie niezbędnego oprogramowania, które będzie wykorzystywane na tych i kolejnych zajęciach.
 
-### Proszę o zapoznanie się z następującymi materiałami:
-
+## Proszę o zapoznanie się z następującymi materiałami:
 1. [API](https://pl.wikipedia.org/wiki/Interfejs_programowania_aplikacji)
 1. [REST](https://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm)
 1. [REST API Tutorial](https://restfulapi.net/)
@@ -23,7 +20,7 @@ Przed zajęciami proszę o zapoznanie się z załączonymi materiałami oraz o z
 1. [Flyway Migration](https://docs.spring.io/spring-boot/docs/2.5.5/reference/htmlsingle/#howto-execute-flyway-database-migrations-on-startup)
 1. [The Repository Pattern Explained](https://blog.sapiensworks.com/post/2014/06/02/The-Repository-Pattern-For-Dummies.aspx)
 
-### Materiały, które mogą być pomocne podczas rozwiązywania zadania
+## Materiały, które mogą być pomocne podczas rozwiązywania zadania:
 1. [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
 1. [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 1. [REST error handling with Spring](https://www.baeldung.com/exception-handling-for-rest-with-spring)
@@ -36,7 +33,7 @@ Przed zajęciami proszę o zapoznanie się z załączonymi materiałami oraz o z
 1. [Introduction to Postman](https://learning.postman.com/docs/getting-started/introduction/)   
 1. [Git cheat sheet](https://training.github.com/downloads/pl/github-git-cheat-sheet)
 
-###  Przed zajęciami proszę o zainstalowanie:
+##  Przed zajęciami proszę o zainstalowanie:
 * [Java Development Kit (JDK) w wersji 11, dystrybucja OpenJDK](https://openjdk.java.net/install/)
   * [Szczegłówa instrukcja instalacji OpenJDK na systemach MS Windows, na przykładzie OpenJDK 8](https://techoral.com/blog/java/openjdk-install-windows.html)
 * [Gita, najnowsza dostępna wersja](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
