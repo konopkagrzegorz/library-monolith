@@ -21,16 +21,16 @@ W przypadku braku znajomości języka SQL polecam zapoznanie się z [dodatkowymi
 > Aplikacja powinna umożliwiać:
 > * pobranie listy użytkowników, usuwanie oraz dodawanie nowych użytkowników,
 > * pobranie listy dostępnych książek,
-> * pobranie listy książek wypożyczonych przez wybranego użytkownika
+> * pobranie informacji o książce wraz z jej historią wypożyczeń
 > * wypożyczenie oraz zwrot książki przez użytkownika
 >
-> Proszę zwrócić szczególną uwagę na trzymanie się formatu danych (JSON) oraz obsługi błędów zdefiniowanych w ramach dokumentacji REST API.
-> Dodatkowa funkcjonalność nie wymagana w ramach zadania nie będzie wypływała na ocenę końca przyznaną za zadanie.
+> Proszę zwrócić szczególną uwagę na trzymanie się formatu danych (JSON) oraz obsługi błędów zdefiniowanych w ramach dokumentacji [REST API](https://epam-online-courses.github.io/ZTP-Java-REST-Monolith/).
+> Dodatkowa funkcjonalność nie wymagana w ramach zadania nie będzie wypływała na ocenę końcową.
 
 **2. Sprawozdanie z laboratorium**
 > Dołączenie sprawozdania do zrealizowanego zdania jest warunkiem koniecznym do uzyskania pozytywnej oceny z laboratorium. Zadania bez sprawozdania lub ze sprawozdaniem zawierającym znaczące braki merytoryczne nie będą podlegały ocenie.
 >
-> Sprawozdanie powinno zostać zamieszczone w katalogu [docs](docs) i dodane do repozytorium w oddzielnym commicie pod tytułem "Sprawozdanie".
+> Sprawozdanie powinno zostać zamieszczone w katalogu [docs](docs) i dodane do repozytorium w oddzielnym commicie pod tytułem "**Sprawozdanie**".
 
 **3. Termin dostarczenia rozwiązania**
 > Bezpośrednio po zajęciach w repozytorium powinny znaleźć się wynik prac zakończonych w trakcie laboratorium.
