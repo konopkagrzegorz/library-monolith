@@ -1,6 +1,6 @@
-# ZTP - Aplikacja REST oparta o wzorzec Monolitu 
+# Literatura i materiały pomocnicze
 
-## Przygotowanie
+## Wstęp
 
 Przed zajęciami proszę o zapoznanie się z załączonymi materiałami oraz o zainstalowanie niezbędnego oprogramowania, które będzie wykorzystywane na tych i kolejnych zajęciach.
 
