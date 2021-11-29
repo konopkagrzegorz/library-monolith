@@ -1,8 +1,9 @@
-package pl.edu.pk.ztp.librarymonolith.dto;
+package pl.edu.pk.ztp.librarymonolith.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import pl.edu.pk.ztp.librarymonolith.dto.BookDTO;
 import pl.edu.pk.ztp.librarymonolith.repository.BookRepository;
 
 import java.util.ArrayList;
@@ -47,7 +48,7 @@ public class BookService {
     public BookDTO findBookRentals(Integer bookID) {
         return bookRepository.findBookRentals(bookID);
     }
-    
+
     public BookDTO updateBook(BookDTO bookDTO) {
         return bookRepository.save(bookDTO);
     }

@@ -1,7 +1,8 @@
-package pl.edu.pk.ztp.librarymonolith.dto;
+package pl.edu.pk.ztp.librarymonolith.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import pl.edu.pk.ztp.librarymonolith.dto.UserDTO;
 import pl.edu.pk.ztp.librarymonolith.repository.UserRepository;
 
 import java.util.List;
