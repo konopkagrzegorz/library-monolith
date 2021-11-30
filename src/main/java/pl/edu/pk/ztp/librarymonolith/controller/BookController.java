@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonView;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.edu.pk.ztp.librarymonolith.dto.*;
@@ -45,7 +44,7 @@ public class BookController {
     @GetMapping("{id}")
     @ApiOperation(value = "Return book (if exists) by given ID",
             produces = "application/json")
-    @JsonView(ResourcesView.Normal.class)
+    @JsonView({ResourcesView.Normal.class})
     public BookDTO getBookRentals(@PathVariable("id") final Integer bookID) {
         return bookService.findBookRentals(bookID);
     }

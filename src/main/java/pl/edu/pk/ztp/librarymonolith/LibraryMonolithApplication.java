@@ -5,12 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.bind.annotation.RestController;
-import pl.edu.pk.ztp.librarymonolith.controller.UserController;
-import pl.edu.pk.ztp.librarymonolith.dto.UserDTO;
-import pl.edu.pk.ztp.librarymonolith.service.UserService;
-import pl.edu.pk.ztp.librarymonolith.model.Role;
-import pl.edu.pk.ztp.librarymonolith.repository.UserRepository;
-import springfox.documentation.builders.ApiInfoBuilder;
+import pl.edu.pk.ztp.librarymonolith.converter.StringArrayToStringConverter;
+import pl.edu.pk.ztp.librarymonolith.views.ResourcesView;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -23,7 +19,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import java.util.Collections;
 import java.util.List;
 
-@SpringBootApplication(scanBasePackageClasses = {UserRepository.class, UserDTO.class, UserService.class, Role.class, UserController.class})
+@SpringBootApplication
 @EnableTransactionManagement
 @EnableSwagger2
 public class LibraryMonolithApplication {
