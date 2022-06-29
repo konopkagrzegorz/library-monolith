@@ -104,7 +104,7 @@ public class BookController {
                     .filter(rental -> Objects.equals(rental.getBook().getId(), bookID))
                     .filter(rental -> rental.getReturned() == null)
                     .findFirst();
-            if (bookRentalDTO.isEmpty())
+            if (!bookRentalDTO.isPresent())
                 return ResponseEntity.status(HttpStatus.CONFLICT).build();
             else {
                 bookRentalDTO.get().setReturned(LocalDateTime.now());
