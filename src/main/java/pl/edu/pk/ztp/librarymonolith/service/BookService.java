@@ -23,17 +23,17 @@ public class BookService {
 
     public List<BookDTO> findAll(boolean showOnlyAvailable) {
         if (showOnlyAvailable) {
-
-            List<BookDTO> allBooks = bookRepository.findAll();
-            List<BookDTO> filteredBooks = allBooks.stream().filter(bookDTO -> {
-                long value =  bookDTO.getRentals().stream()
-                        .filter(bookRentalDTO -> bookRentalDTO.getReturned() == null).count();
-                if (value == bookDTO.getQuantity()) {
-                    return false;
-                }
-                return true;
-            }).collect(Collectors.toList());
-            return filteredBooks;
+//            List<BookDTO> allBooks = bookRepository.findAll();
+//            List<BookDTO> filteredBooks = allBooks.stream().filter(bookDTO -> {
+//                long value =  bookDTO.getRentals().stream()
+//                        .filter(bookRentalDTO -> bookRentalDTO.getReturned() == null).count();
+//                if (value == bookDTO.getQuantity()) {
+//                    return false;
+//                }
+//                return true;
+//            }).collect(Collectors.toList());
+//            return filteredBooks;
+            return bookRepository.findAllAvailable();
         }
         return bookRepository.findAll();
     }

@@ -2,6 +2,7 @@ package pl.edu.pk.ztp.librarymonolith.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonView;
+import pl.edu.pk.ztp.librarymonolith.converter.RolesListToStringConverter;
 import pl.edu.pk.ztp.librarymonolith.converter.StringArrayToStringConverter;
 import pl.edu.pk.ztp.librarymonolith.views.ResourcesView;
 
@@ -23,9 +24,9 @@ public class UserDTO {
     private String username;
 
     @Column(nullable = false, name = "roles")
-    @Convert(converter = StringArrayToStringConverter.class)
+    @Convert(converter = RolesListToStringConverter.class)
     @JsonView(ResourcesView.Full.class)
-    private String[] roles;
+    private List<Role> roles;
 
     @OneToMany(mappedBy = "user")
     @JsonIgnore
@@ -47,11 +48,11 @@ public class UserDTO {
         this.username = username;
     }
 
-    public String[] getRoles() {
+    public List<Role> getRoles() {
         return roles;
     }
 
-    public void setRoles(String[] roles) {
+    public void setRoles(List<Role> roles) {
         this.roles = roles;
     }
 
